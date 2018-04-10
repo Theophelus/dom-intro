@@ -23,12 +23,12 @@ var radioButtonBill = function(){
     }
 
     if(billItemType ==="sms"){
-      smsTotal = .65;
+      smsTotal += .65;
     }
 
   //}
   callsLbl.innerHTML = callTotal.toFixed(2);
-  smsLbl.innerHTML = smsTotal;
+  smsLbl.innerHTML = smsTotal.toFixed(2);
   var totalBill = callTotal + smsTotal
   billTotal.innerHTML = totalBill.toFixed(2);
 

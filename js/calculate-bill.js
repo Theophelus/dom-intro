@@ -26,6 +26,14 @@ var totalPhoneBill = function(){
   //Round the totalBill to two ddecimal
   var roundedTotalBill = total.toFixed(2);
   totalBill.innerHTML = roundedTotalBill;
+
+  //Chjeck if totalBill is greater than 20 then raise warningSettings
+  if(total >= 10){
+    totalBill.classList.add("warning");
+  }
+  if(total >= 20){
+    totalBill.classList.add("danger");
+  }
 }
 
 //link the function to a click event on the calculate button

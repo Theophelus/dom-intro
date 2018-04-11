@@ -8,8 +8,8 @@ var calculate = document.querySelector(".addToBillBtn");
 //create a variable that will keep track( of the total bill
 var totalCostElem = document.querySelector(".totalOne");
 var totalCost = 0;
-var callTotal = 0;
-var smsTotal = 0;
+var textCallTotal = 0;
+var textSmsTotal = 0;
 
 //Add a function call inputBill
 var textBillTotal = function(){
@@ -18,27 +18,27 @@ var textBillTotal = function(){
 
   //in the event listener check if the value in the bill type textbox is 'sms' or 'call'
   if(billString.startsWith("c")){
-    callTotal += 2.75;
+    textCallTotal += 2.75;
   }
   else if(billString.startsWith("s")){
-    smsTotal += .65;
+    textSmsTotal += .65;
   }
 
   //Initialise all the labels with call and sms total
-  callElem.innerHTML = callTotal.toFixed(2);
-  smsElem.innerHTML = smsTotal.toFixed(2);
+  callElem.innerHTML = textCallTotal.toFixed(2);
+  smsElem.innerHTML = textSmsTotal.toFixed(2);
 
   //Calculate the total amount of calls and sms's
-  totalCost = callTotal + smsTotal;
+  totalCost = textCallTotal + textSmsTotal;
   //initialise total amount with totalBill reference
   totalCostElem.innerHTML = totalCost.toFixed(2);
 
 
-  //A"dd danger if total Cost is greater than or Equal to R50
-  if(totalCost >= 50){
-    totalCostElem.clssslist.add("danger");
-  }else if(totalCost >= 30){
-    totalCostElem.classlist.add("warning");
+  //Add danger if total Cost is greater than or Equal to R50
+  if(totalCost >= 30){
+    totalCostElem.clssslist.add("warning");
+  }else if(totalCost >= 50){
+    totalCostElem.classlist.add("danger");
   }
 
 }

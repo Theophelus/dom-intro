@@ -32,8 +32,10 @@ var radioButtonBill = function(){
   var totalBill = callTotal + smsTotal
   billTotal.innerHTML = totalBill.toFixed(2);
 
-  if(totalBill >= 10){
-    billTotal.classList.add("danger")
+  if(totalBill >= 30){
+    billTotal.classList.add("warning");
+  }else if (true) {
+
   }
 }
 

@@ -76,10 +76,14 @@ var billSettings = function(){
   totalElem.innerHTML = totalForAll.toFixed(2);
 
   // * check the value thresholds and display the total value in the right color.
-  if(totalForAll >= warningLevelTotal && totalForAll < criticalTotal){
-    totalElem.classList.add("warning");
-  }else if(totalForAll >= criticalTotal{
+
+
+  if(totalForAll >= criticalTotal){
     totalElem.classList.add("danger");
+  }
+
+  else if(totalForAll >= warningLevelTotal ){
+    totalElem.classList.add("warning");
   }
 }
 

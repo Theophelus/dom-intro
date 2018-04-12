@@ -23,7 +23,7 @@ var radioButtonBill = function(){
     }
 
     if(billItemType ==="sms"){
-      smsTotal += .65;
+      smsTotal += .75;
     }
 
   //}
@@ -34,8 +34,9 @@ var radioButtonBill = function(){
 
   if(totalBill >= 30){
     billTotal.classList.add("warning");
-  }else if (true) {
-
+  }
+   if (totalBill >= 50) {
+    billTotal.classList.add("danger");
   }
 }
 

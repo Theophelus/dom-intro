@@ -21,7 +21,7 @@ var textBillTotal = function(){
     textCallTotal += 2.75;
   }
   else if(billString.startsWith("s")){
-    textSmsTotal += .65;
+    textSmsTotal += .75;
   }
 
   //Initialise all the labels with call and sms total
@@ -36,9 +36,10 @@ var textBillTotal = function(){
 
   //Add danger if total Cost is greater than or Equal to R50
   if(totalCost >= 30){
-    totalCostElem.clssslist.add("warning");
-  }else if(totalCost >= 50){
-    totalCostElem.classlist.add("danger");
+    totalCostElem.classList.add("warning");
+  }
+  if(totalCost >= 50){
+    totalCostElem.classList.add("danger");
   }
 
 }

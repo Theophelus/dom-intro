@@ -52,6 +52,7 @@ var updateSettings = function(){
   }
   if(totalForAll < criticalTotal){
     totalElem.classList.remove("danger");
+    addElem.disabled = false;
   }
 }
 //create a function for billSetting
@@ -80,6 +81,7 @@ var billSettings = function(){
 
   if(totalForAll >= criticalTotal){
     totalElem.classList.add("danger");
+    addElem.disabled = true;
   }
 
   else if(totalForAll >= warningLevelTotal ){

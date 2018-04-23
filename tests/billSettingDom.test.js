@@ -13,12 +13,12 @@ describe('Bill With Settings Widget Tests', function(){
   it('should return call total if call radio button is checked and update total', function(){
     var newBillSettings = SettingBill();
     newBillSettings.billTypeSms('call');
-    assert.equal(newSettingBill.returnUpdateCall(), newBillSettings.returnCall());
+    assert.equal(newBillSettings.returnUpdateCall(), newBillSettings.returnCall());
   });
   it('should return sms total if sms radio button is checked and update total', function(){
     var newBillSettings = SettingBill();
     newBillSettings.billTypeSms('sms');
-    assert.equal(newSettingBill.returnUpdateSms(), newBillSettings.returnSms());
+    assert.equal(newBillSettings.returnUpdateSms(), newBillSettings.returnSms());
   });
   it('should return calls and sms total amount', function(){
     var newBillSettings = SettingBill();
